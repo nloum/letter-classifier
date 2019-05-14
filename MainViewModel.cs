@@ -82,6 +82,7 @@ namespace LetterClassifier
                 using (var writer = new CsvWriter(streamWriter))
                 {
                     writer.WriteHeader<ManualClassification>();
+                    writer.NextRecord();
                     writer.WriteRecords(manualClassifications);
                 }
             }
